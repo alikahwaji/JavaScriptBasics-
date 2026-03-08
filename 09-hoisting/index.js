@@ -16,11 +16,11 @@ logger.step('1. Function Hoisting');
 logger.info('Calling function before definition', greet('Student'));
 
 function greet(name) {
-    return `Hello, ${name}!`;
+  return `Hello, ${name}!`;
 }
 
 /* 
-  ⚠️ However, Function Expressions (assigned to variables) are NOT hoisted
+  However, Function Expressions (assigned to variables) are NOT hoisted
   in the same way. The variable itself might be hoisted, but its assignment 
   (the actual function) is not.
 */
@@ -39,8 +39,8 @@ logger.step('2. Variable Hoisting (var)');
 
 // We can access legacyVar before initialization, but it will be undefined.
 logger.info(
-    'Accessing var before initialization',
-    typeof legacyVar === 'undefined' ? 'undefined' : legacyVar
+  'Accessing var before initialization',
+  typeof legacyVar === 'undefined' ? 'undefined' : legacyVar
 );
 
 // eslint-disable-next-line no-var
@@ -61,15 +61,15 @@ logger.info('Accessing var after initialization', legacyVar);
 logger.step('3. Temporal Dead Zone (let/const)');
 
 try {
-    // If we try to access modernVar here, JS will throw a ReferenceError,
-    // NOT return 'undefined' like it did for `var`. This is a GOOD thing
-    // as it catches bugs early!
+  // If we try to access modernVar here, JS will throw a ReferenceError,
+  // NOT return 'undefined' like it did for `var`. This is a GOOD thing
+  // as it catches bugs early!
 
-    // NOTE: We wrap this in an eval so the linter/parser doesn't immediately
-    // stop execution, but it perfectly demonstrates the runtime error.
-    eval('console.log(modernVar)');
+  // NOTE: We wrap this in an eval so the linter/parser doesn't immediately
+  // stop execution, but it perfectly demonstrates the runtime error.
+  eval('console.log(modernVar)');
 } catch (error) {
-    logger.warn(`TDZ Error: ${error.message}`);
+  logger.warn(`TDZ Error: ${error.message}`);
 }
 
 const modernVar = 'I am safe and predictable';

@@ -15,11 +15,11 @@ logger.step('1. Variable Declarations');
 
 const greeting = 'Hello, Developer!'; // This string cannot be reassigned
 logger.info('const greeting', greeting);
-// greeting = "Hi"; // ❌ This would throw a TypeError: Assignment to constant variable.
+// greeting = "Hi"; // This would throw a TypeError: Assignment to constant variable.
 
 let score = 0;
 logger.info('let score (initial)', score);
-score += 10; // ✅ `let` allows reassignment
+score += 10; // `let` allows reassignment
 logger.info('let score (updated)', score);
 
 /* 
@@ -48,7 +48,7 @@ logger.info('typeof myString', typeof myString);
 logger.info('typeof myNumber', typeof myNumber);
 logger.info('typeof myBoolean', typeof myBoolean);
 logger.info('typeof myUndefined', typeof myUndefined);
-logger.info('typeof myNull', typeof myNull); // ⚠️ Note: typeof null returns 'object' - this is a known bug/quirk in JS!
+logger.info('typeof myNull', typeof myNull); // Note: typeof null returns 'object' - this is a known bug/quirk in JS!
 
 /* 
   -------------------------------------------------------------------
@@ -71,6 +71,6 @@ user.age = 29;
 logger.info('User Object (Mutated age)', user);
 
 // However, we cannot assign a completely new object to `user`
-// user = { name: 'Bob' }; // ❌ This throws Assignment to constant variable
+// user = { name: 'Bob' }; // This throws Assignment to constant variable
 
 logger.warn('Always use `const` unless you absolutely need to reassign the entire variable later.');

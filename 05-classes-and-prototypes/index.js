@@ -73,5 +73,5 @@ class MathUtil {
   }
 }
 
-// logger.info('Instance Call', new MathUtil().add(5, 5)); // ❌ This would fail!
-logger.info('Static Call', MathUtil.add(10, 20)); // ✅ Calls the class directly
+// logger.info('Instance Call', new MathUtil().add(5, 5)); // This would fail!
+logger.info('Static Call', MathUtil.add(10, 20)); // Calls the class directly
