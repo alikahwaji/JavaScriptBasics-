@@ -7,11 +7,26 @@ Welcome to the JavaScript Basics Repository! This repository is designed to help
 - [Node.js](https://nodejs.org/) (v18 or higher recommended)
 - A text editor like [VS Code](https://code.visualstudio.com/)
 
-## Initial Setup
+## How to Use This Repository (For Students)
 
-After cloning this repository, navigate into the directory and install dependencies (for linting/formatting):
+To start working with this repository without affecting the original codebase, we recommend **forking** it, and then **cloning** your fork.
+
+### 1. Fork the Repository
+Click the **Fork** button at the top right of this page. This creates a copy of the repository in your own GitHub account.
+
+### 2. Clone Your Fork
+Clone the forked repository to your local machine. Open your terminal and run:
 
 ```bash
+git clone https://github.com/YOUR_USERNAME/JavaScriptBasics-.git
+```
+*(Replace `YOUR_USERNAME` with your actual GitHub username)*
+
+### 3. Install Dependencies
+Navigate into the directory and install the necessary dependencies (for linting and formatting):
+
+```bash
+cd JavaScriptBasics-
 npm install
 ```
 
